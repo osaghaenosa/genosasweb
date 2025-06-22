@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "TanKulture";
+  src: url('../fonts/tankulture.otf') format('opentype');
+}
+:root{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.tankulture_font {
+  font-family: "TanKulture", sans-serif;
+  font-weight: bold;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    background-color: rgb(4, 31, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+.heading{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: rgba(20, 59, 20, 0.884);
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(241, 226, 6), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(41, 240, 75), 1px 1px 0 rgb(212, 240, 88);
+    animation: header-animate 0.5s linear;
+}
+@keyframes header-animate {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+        height: 0px;
+    }
+    to{
+        transform: translateY(0px);
+        height: initial;
+        opacity: 1;
+    }
+}
+.content_parragraph{
+    font-size: 1rem;
+    text-align: center;
+}
+.top_nav{
+    display: flex;
+    flex-direction: row;
+    padding: 3px 2rem;
+    width: 30%;
+    border: solid 1px rgb(212, 240, 88);
+    border-radius: 32px;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: nav-animate 0.4s linear;
+
+}
+@keyframes nav-animate {
+    from{
+        transform: scale(0.2,0.2);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+.top_nav ul{
+    display: flex;
+    flex-direction: row;
+    width: initial;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    & li{
+        list-style: none;
+        font-size: 16px;
+
+        &:hover{
+            color: rgb(212, 240, 88);
+            cursor: pointer;
+        }
+    }
+}
+.top_nav .icon_place{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.static_bg_image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    opacity: 0.2;
+    z-index: -1;
+    filter: blur(5px);
+    animation: background-animate 10.5s linear infinite;
+
+}
+@keyframes background-animate {
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.2,1.2);
+    }
+}
+.products{
+    width: 100vw;
+    height: 300px;
+    padding: 10px 20px;
+    background-color: rgb(0,0,0,0);
+}
+.products .rock_back{
+    opacity: 0.5;
+    animation: rockb-animate 1.5s linear;
+
+}
+@keyframes rockb-animate {
+    from{
+        margin-top: 600px;
+        transform: translatex(-250px);
+        opacity: 0;
+    }
+    to{
+        margin-top: 0px;
+        transform: translatex(0px);
+        opacity: 0.4;
+    }
+}
+.products .rock1{
+    position: absolute;
+    top: 80%;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: initial;
+    animation: rock1-animate 0.8s linear;
+}
+@keyframes rock1-animate {
+    from{
+        margin-top: 200px;
+    }
+    to{
+        margin-top: 0px;
+    }
+}
+.products .skinpal{
+    position: absolute;
+    top: 70%;
+    left: calc(50% - 20px);
+    width: 90px;
+    height: initial;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: products-animate 0.8s linear;
+
+}
+
+.products .mouthwash{
+    position: absolute;
+    top: calc(70% - 100px);
+    left: calc(50% - 70px);
+    width: 80px;
+    height: initial;
+    
+    animation: products-animate 1.8s linear;
+
+}
+.products .delightsomerose{
+    position: absolute;
+    top: calc(70% - 50px);
+    left: calc(50% - 140px);
+    width: 65px;
+    height: initial;
+    
+    animation: products-animate 0.8s linear;
+
+}
+.products .soap{
+    position: absolute;
+    top: calc(70% + 40px);
+    left: calc(50% - 120px);
+    width: 130px;
+    height: initial;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: products-animate 0.9s linear;
+
+}
+@keyframes products-animate {
+    0%{
+        margin-top: 200px;
+    }
+    60%{
+        margin-top: -30px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+.customers-comments_section{
+    width: 100vw;
+    height: initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    margin-top: -52px;
+    bottom: 0;
+    animation: bottom-animate 0.9s linear;
+    
+    
+}
+@keyframes bottom-animate {
+    0%{
+        transform: translateY(200px);
+    }
+    60%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.customers-comments_section .card{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+}
+.card .person{
+    border: solid 1px silver;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.card .comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card .comments .text{
+    font-size: 14px;
+}
+.card .comments .star-rating{
+    color: yellow;
+}
+.customers-comments_section .page_section{
+    padding: 10px 1rem;
+
+    & button{
+        width: 300px;
+        height: auto;
+        border-radius: 32px;
+        border: solid 1px yellow;
+        color: yellow;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: "TanKulture";
+        transition: all 0.5s ease-in;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        &:hover{
+            border: none;
+            color: black;
+            background-color: yellow;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .top_nav ul{
+        display: none;
+    }
+    .customers-comments_section{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    .customers-comments_section .card{
+        width: 90%;
+    }
+    .card .comments .text{
+        width: 90%;
+    }
+    .products .rock_back{
+        display: none;
+    }
+}

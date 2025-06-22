@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "TanKulture";
+  src: url('../fonts/tankulture.otf') format('opentype');
+}
+:root{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.tankulture_font {
+  font-family: "TanKulture", sans-serif;
+  font-weight: bold;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+.heading{
+    font-size: 5rem;
+    margin-bottom: 20px;
+    margin-top: 110px;
+    color: rgba(94, 94, 94, 0.959);
+    text-align: center;
+    text-shadow: -1px -1px 0 rgb(241, 6, 6), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(240, 210, 41), 1px 1px 0 rgb(240, 88, 88);
+    animation: header-animate 0.5s linear;
+}
+@keyframes header-animate {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+        height: 0px;
+    }
+    to{
+        transform: translateY(0px);
+        height: initial;
+        opacity: 1;
+    }
+}
+.content_parragraph{
+    font-size: 0.4rem;
+    text-align: center;
+}
+.top_nav{
+    display: flex;
+    flex-direction: row;
+    padding: 3px 2rem;
+    width: 30%;
+    border: solid 1px rgb(240, 255, 106);
+    border-radius: 32px;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: nav-animate 0.4s linear;
+
+}
+@keyframes nav-animate {
+    from{
+        transform: scale(0.2,0.2);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+.top_nav ul{
+    display: flex;
+    flex-direction: row;
+    width: initial;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    & li{
+        list-style: none;
+        font-size: 16px;
+
+        &:hover{
+            color: rgb(240, 255, 106);
+            cursor: pointer;
+        }
+    }
+}
+.top_nav .icon_place{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.static_bg_image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: initial;
+    aspect-ratio: 16/9;
+    opacity: 0.2;
+    z-index: -1;
+    filter: blur(5px);
+    animation: background-animate 10.5s linear infinite;
+    height: 100%;
+}
+@keyframes background-animate {
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.2,1.2);
+    }
+}
+.products{
+    width: 100vw;
+    height: 300px;
+    padding: 10px 20px;
+    background-color: rgb(0,0,0,0);
+}
+
+
+.products .rock1{
+    position: absolute;
+    top: 80%;
+    margin-top: 200px;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: initial;
+    animation: rock1-animate 0.8s linear;
+}
+@keyframes rock1-animate {
+    from{
+        margin-top: -100px;
+        opacity: 1;
+    }
+    to{
+        margin-top: 0px;
+        opacity: 0;
+    }
+}
+.products .skinpal{
+    position: absolute;
+    top: 70%;
+    left: calc(50% - 20px);
+    width: 90px;
+    height: initial;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: products-animate 0.8s linear;
+
+}
+
+.products .mouthwash{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 70px);
+    width: 190px;
+    transform: rotate(-30deg);
+    height: initial;
+    
+    animation: products-animate 0.8s linear;
+
+}
+.products .delightsomerose{
+    position: absolute;
+    top: calc(40% - 100px);
+    left: calc(50% - 140px);
+    width: 65px;
+    height: initial;
+    
+    animation: products-animate 0.8s linear;
+
+}
+.products .soap{
+    position: absolute;
+    top: calc(70% + 40px);
+    left: calc(50% - 120px);
+    width: 130px;
+    height: initial;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: products-animate 0.9s linear;
+
+}
+@keyframes products-animate {
+    0%{
+        margin-top: 200px;
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        margin-top: 0px;
+        transform: rotate(-30deg);
+    }
+}
+.customers-comments_section{
+    width: 100vw;
+    height: initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    margin-top: -52px;
+    bottom: 0;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    animation: bottom-animate 0.9s linear;
+    gap: 1rem;
+    overflow-x: hidden;
+    
+    
+}
+@keyframes bottom-animate {
+    0%{
+        transform: translateY(200px);
+    }
+    60%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.customers-comments_section .card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.5rem 2rem;
+    width: 350px;
+    border: solid 1px white;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.4s ease-in;
+
+    &:hover{
+        background-color: white;
+        color: black;
+        height: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+}
+.card .person{
+    border: solid 1px silver;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.card .comments{
+    display: flex;
+    flex-direction: column;
+    
+}
+.card .comments .text{
+    font-size: 14px;
+    width: 250px;
+    word-break: break-all;
+}
+.card .comments .star-rating{
+    color: yellow;
+}
+.customers-comments_section .order_place button{
+    width: 200px;
+    height: auto;
+    border-radius: 32px;
+    border: solid 1px white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 15px;
+    
+    transition: all 0.5s ease-in;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    &:hover{
+        border: none;
+        color: black;
+        background-color: white;
+    }
+}
+.customers-comments_section .page_section{
+    padding: 10px 1rem;
+
+    & button{
+        width: 200px;
+        height: auto;
+        border-radius: 32px;
+        border: solid 1px rgb(245, 243, 164);
+        color: rgb(245, 243, 164);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: "TanKulture";
+        transition: all 0.5s ease-in;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        &:hover{
+            border: none;
+            color: black;
+            background-color: rgb(245, 243, 164);
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .top_nav ul{
+        display: none;
+    }
+    .customers-comments_section{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
+    .customers-comments_section .card{
+        width: 90%;
+    }
+    .card .comments .text{
+        width: 90%;
+    }
+}

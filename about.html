@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosa Products</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+
+</head>
+<body>
+    <div class="top_nav" role="navigation">
+        <div class="icon_place">
+            <span class="icon">N</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 1rem;"><span>Products</span><i class="iconoir-nav-arrow-down"></i></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img class="static_bg_image" src="images/bg.jpg">
+        <div class="top">
+            <h1 class="tankulture_font heading">ABOUT NOSA PRODUCTS</h1>
+            <p class="content_parragraph">This is a sample application showcasing recent edits in settings and styles.</p>
+            <div class=""></div>
+        </div>
+        <div class="products">
+            <img class="rock_back" src="images/rock1.png">
+            
+        </div>
+        <div class="bottom">
+            <div class="customers-comments_section">
+                <div class="card">
+                    <div class="person"></div>
+                    <div class="comments">
+                        <span class="text">I have been using Nosa Products for up to 3 years now ...</span>
+                        <div class="star-rating">
+                            <i class="iconoir-star-solid"></i>
+                            <i class="iconoir-star-solid"></i>
+                            <i class="iconoir-star-solid"></i>
+                            <i class="iconoir-star-solid"></i>
+                            <i class="iconoir-star-solid"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="mouthwash.html"><div class="page_section"><button>Check out Our Products <i class="iconoir-nav-arrow-right"></i></button></div></a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    const comment_array = [
+        "i love Nosa Products",
+        "I have been using Nosa for 3 years now"
+    ];
+    var text = document.querySelector(".text");
+    var timer = 0;
+    setInterval(function(){
+        timer++;
+        if(timer >= comment_array.length){
+            
+            timer=0;
+        }
+        text.innerHTML = comment_array[timer];
+    },5000)
+</script>
+</html>
