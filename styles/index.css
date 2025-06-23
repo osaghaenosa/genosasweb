@@ -291,9 +291,28 @@ body{
 }
 
 @media screen and (max-width:1024px) {
+    .top_nav{
+        width: 80%
+    }
     .top_nav ul{
         display: none;
+        width: 50%;
+        background-color: white;
+        position: fixed;
+        padding: 1rem;
+        color: black;
+        z-index: 1000;
+        top: 70px;
+        left: 50%;
+        flex-direction: column;
+        align-items: first baseline;
+
+        & li a{
+            color: black !important;
+            width: 100% !important;
+        }
     }
+    
     .customers-comments_section{
         flex-direction: column;
         width: 100vw;
@@ -307,5 +326,8 @@ body{
     }
     .products .rock_back{
         display: none;
+    }
+    .tmenu{
+        display: block !important;
     }
 }

@@ -13,17 +13,33 @@
         <div class="icon_place">
             <span class="icon">N</span>
         </div>
-        <ul>
+        <i class="iconoir-menu tmenu" id="tmenu" style="display: none;"></i>
+        <ul id="nav_list">
             <li><a href="index.html">Home</a></li>
             <li style="display: flex; align-items: center; justify-content: center; gap: 1rem;"><span>Products</span><i class="iconoir-nav-arrow-down"></i></li>
-            <li>Contact us</li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </div>
     <div class="container">
         <img class="static_bg_image" src="images/bg.jpg">
-        <div class="top">
+        <div class="top" style="padding-left: 1rem; padding-right: 1rem;">
             <h1 class="tankulture_font heading">CONTACT US</h1>
-            <p class="content_parragraph">This is a sample application showcasing recent edits in settings and styles.</p>
+            <p class="content_parragraph">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><i class="iconoir-whatsapp"></i> +234 8030669706</li>
+                    <li><i class="iconoir-facebook"></i> Genosas Investment</li>
+                    <li><i class="iconoir-instagram"></i> Nosa Products</li>
+
+                </ul>
+                <br>
+                <h2>Phone Numbers</h2>
+                <ul>
+                    <li><i class="iconoir-phone"></i> 08030669706</li>
+                    
+
+                </ul>
+            </p>
             <div class=""></div>
         </div>
         <div class="products">
@@ -53,6 +69,18 @@
     </div>
 </body>
 <script>
+    const tmenu = document.getElementById("tmenu");
+        const nav_list = document.getElementById("nav_list");
+
+        tmenu.addEventListener("click", () => {
+            if (nav_list.style.display === "flex") {
+                nav_list.style.display = "none";
+            } else {
+                nav_list.style.display = "flex";
+            }
+        });
+
+
     const comment_array = [
         "i love Nosa Products",
         "I have been using Nosa for 3 years now"

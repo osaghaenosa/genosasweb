@@ -13,17 +13,20 @@
         <div class="icon_place">
             <span class="icon">N</span>
         </div>
-        <ul>
-            <li><a href="about.html">About</a></li>
+        <i class="iconoir-menu tmenu" id="tmenu" style="display: none;"></i>
+        <ul id="nav_list">
+            <li><a href="index.html">Home</a></li>
             <li style="display: flex; align-items: center; justify-content: center; gap: 1rem;"><span>Products</span><i class="iconoir-nav-arrow-down"></i></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </div>
     <div class="container">
         <img class="static_bg_image" src="images/bg.jpg">
-        <div class="top">
+        <div class="top" style="padding-left: 1rem; padding-right: 1rem;">
             <h1 class="tankulture_font heading">NOSA PRODUCTS</h1>
-            <p class="content_parragraph">This is a sample application showcasing recent edits in settings and styles.</p>
+            <p class="content_parragraph">Your Healthy and natural products vendor</p>
+            <p class="content_parragraph" style="font-size: 2rem; text-align: center;">What do you need from us today ?</p>
+
             <div class=""></div>
         </div>
         <div class="products">
@@ -58,6 +61,18 @@
     </div>
 </body>
 <script>
+    const tmenu = document.getElementById("tmenu");
+        const nav_list = document.getElementById("nav_list");
+
+        tmenu.addEventListener("click", () => {
+            if (nav_list.style.display === "flex") {
+                nav_list.style.display = "none";
+            } else {
+                nav_list.style.display = "flex";
+            }
+        });
+
+
     const comment_array = [
         "i love Nosa Products",
         "I have been using Nosa for 3 years now"
@@ -72,5 +87,7 @@
         }
         text.innerHTML = comment_array[timer];
     },5000)
+
+    
 </script>
 </html>

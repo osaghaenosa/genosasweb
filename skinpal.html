@@ -13,8 +13,9 @@
         <div class="icon_place">
             <span class="icon">N</span>
         </div>
-        <ul>
-            <li><a href="/">Home</a></li>
+        <i class="iconoir-menu tmenu" id="tmenu" style="display: none;"></i>
+        <ul id="nav_list">
+            <li><a href="index.html">Home</a></li>
             <li style="display: flex; align-items: center; justify-content: center; gap: 1rem;"><span>Products</span><i class="iconoir-nav-arrow-down"></i></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -62,5 +63,17 @@
         </div>
         
     </div>
+    <script>
+        const tmenu = document.getElementById("tmenu");
+        const nav_list = document.getElementById("nav_list");
+
+        tmenu.addEventListener("click", () => {
+            if (nav_list.style.display === "flex") {
+                nav_list.style.display = "none";
+            } else {
+                nav_list.style.display = "flex";
+            }
+        });
+    </script>
 </body>
 </html>
